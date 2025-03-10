@@ -24,7 +24,7 @@ app.get('/items/:id', (req, res) => {
     if (!item) return res.status(404).send('Item not found');
     res.json(item);
 })
-//items post
+//items post comment
 app.post('/items', (req, res) => {
     const { name } = req.body;
     const newItem = { id: items.length + 1, name };
